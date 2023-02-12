@@ -95,6 +95,7 @@ while True:
             if event == "Quit" or event == sg.WIN_CLOSED:
                 window.close()
                 break
+"""#THE FOLLOWING QUOTED SECTION IS NOT MY CODE
     if event == "OK" and values ['a'] == "Testing Window":
         left_column = [
             [sg.InputText()],
@@ -171,7 +172,7 @@ while True:
         window = sg.Window(layout)
         while True:
             event, values = window.read()
-
+"""
     if event == "OK" and values['a'] == "Tic Tac Toe":
 
         import arcade
