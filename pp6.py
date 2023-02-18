@@ -1,7 +1,7 @@
 #import PySimpleGUI as sg
 import arcade
 import random
-'
+
 #https://www.w3schools.com/python/default.asp
 #https://github.com/zhiwehu/Python-programming-exercises/blob/master/100%2B%20Python%20challenging%20programming%20exercises%20for%20Python%203.md
 #https://github.com/practical-tutorials/project-based-learning#python
