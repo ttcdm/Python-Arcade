@@ -31,7 +31,7 @@ sg.theme("DarkAmber")
 layout = [
           [sg.Text("Type something here and press OK to enter"), sg.InputText(key = 'x')],
           [sg.Text("Type something else here and press Ok to enter"), sg.InputText(key = 'y', size = (41, 5))],
-          [sg.InputCombo(("Calculator", "Pong", "Input Thingy", "Testing Window", "Theme viewer", "Image Viewer", "2D Shooter", "Flappy Sprite"), key = 'a', default_value = "Flappy Sprite")],
+          [sg.InputCombo(("Calculator", "Pong", "Input Thingy", "Testing Window", "Theme viewer", "Image Viewer", "2D Shooter", "Flappy Sprite"), key = 'a', default_value = "2D Shooter")],
           #if it doesn't work in future things, try adding back the dashes like in the doc ex. (key = '-x-')
           [sg.Text("Slider thingy"), sg.Slider(range = (1, 100), key = ('z'))],
           [sg.Button("OK")],
@@ -273,6 +273,9 @@ while True:
                         self.setup()
                     else:
                         pass
+
+            def on_close(self):
+                arcade.close_window()
 
             def on_update(self, delta_time: float):
                 self.tbi = 0
@@ -582,6 +585,8 @@ while True:
                     #map_gen()
                     nmapgen()
 
+
+
             def on_key_press(self, key, modifiers: int):
                 if key == arcade.key.T:#maybe use this whole block for clarity instead of using the one liner until you fully understand how it works
                     if self.fullscreen == False:
@@ -668,6 +673,9 @@ while True:
                 arcade.draw_text(text = int(self.bulletspriteinfo.angle), color=arcade.color.WHITE, start_x = self.leftview + 10, start_y = self.bottomview + 60, font_size = 15, bold = True)
                 arcade.draw_text(text = f"Coins: {self.coin_counter}", color=arcade.color.WHITE, start_x = self.leftview + 10, start_y = self.bottomview + 85, font_size = 15, bold = True)
 
+            def on_close(self):
+                arcade.close_window()
+
             def on_update(self, delta_time):
                 if self.r_pressed and not self.dead:
                     self.setup()
@@ -736,7 +744,7 @@ while True:
                 for wall in wallhitlist:
                     wall.remove_from_sprite_lists()
                 """
-                
+
                 for bulletspriteimg in self.bulletspritelist:
                     if self.current_level == 1:
                         bullethitlist = arcade.check_for_collision_with_list(bulletspriteimg, self.mapspritelist["Tile Layer 1"])
