@@ -7,3 +7,6 @@ PySimpleGui is only used for opening a window to select the different projects t
 Arcade is the main package that is use to create the games.
 I've only created this repository aa of February 2023, so there are no markers or past files to adequately mark
 my progress over the past few years, but commitments will be pushed whenever I start another project.
+
+There are two main games. The platformer and the flappy bird clone. They can be selected by running the main pp5.py file and selecting
+the option in the drop down menu in the pop up window.
