@@ -9,4 +9,4 @@ I've only created this repository aa of February 2023, so there are no markers o
 my progress over the past few years, but commitments will be pushed whenever I start another project.
 
 There are two main games. The platformer and the flappy bird clone. They can be selected by running the main pp5.py file and selecting
-the option in the drop down menu in the pop up window.
+the option in the drop down menu in the pop up window. However, the platformer may or may not work due to missing sprites and maps that need to be manually installed.
